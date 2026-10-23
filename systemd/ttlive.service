@@ -1,0 +1,26 @@
+[Unit]
+Description=TikTok LIVE streamer (ttlive)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=CHANGE_ME
+WorkingDirectory=/home/CHANGE_ME
+
+# Get these from a Windows machine that has run TikTok LIVE Studio, or reuse
+# the values you already use there.
+Environment=TTLIVE_DEVICE_ID=CHANGE_ME
+Environment=TTLIVE_INSTALL_ID=CHANGE_ME
+Environment=NO_COLOR=1
+
+# The session must already exist for this user:  ttlive login --cookie "..."
+ExecStart=/usr/local/bin/ttlive go --title "Join me" --file /home/CHANGE_ME/clip.mp4
+
+Restart=always
+RestartSec=10
+KillSignal=SIGTERM
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

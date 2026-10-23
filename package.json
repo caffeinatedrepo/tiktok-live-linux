@@ -1,0 +1,34 @@
+{
+  "name": "tiktok-live-linux",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Stream a video file to TikTok LIVE from a Linux terminal",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caffeinatedrepo/tiktok-live-linux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caffeinatedrepo/tiktok-live-linux/issues"
+  },
+  "homepage": "https://github.com/caffeinatedrepo/tiktok-live-linux#readme",
+  "keywords": [
+    "tiktok",
+    "live",
+    "stream",
+    "rtmp",
+    "ffmpeg",
+    "cli",
+    "linux"
+  ],
+  "bin": {
+    "ttlive": "bin/ttlive.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node bin/ttlive.js"
+  }
+}

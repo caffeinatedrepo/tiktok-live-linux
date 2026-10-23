@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+.ttlive/
+*.zip
+*.mp4
+*.mkv
+*.mov
